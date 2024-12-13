@@ -1,0 +1,21 @@
+<script setup>
+import { computed } from 'vue';
+import { Link } from '@inertiajs/vue3';
+
+const props = defineProps({
+    href: String,
+    active: Boolean,
+});
+
+const classes = computed(() => {
+    return props.active
+        ? 'rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white'
+        : 'rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white';
+});
+</script>
+
+<template>
+    <Link :href="href" :class="classes">
+        <slot />
+    </Link>
+</template>
