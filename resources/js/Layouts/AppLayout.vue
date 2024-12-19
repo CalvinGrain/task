@@ -61,7 +61,7 @@ defineProps({
                                 </DropdownLink>
 
                                 <!-- Administration -->
-                                <div v-can="['news', 'blogs', 'users', 'permissions']">
+                                <div v-can="['news', 'blogs', 'users', 'roles']">
                                     <div class="block px-4 py-2 text-xs text-gray-400">
                                         Administration
                                     </div>
